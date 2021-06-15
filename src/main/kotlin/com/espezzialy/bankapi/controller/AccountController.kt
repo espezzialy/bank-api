@@ -1,5 +1,7 @@
-package com.espezzialy.bankapi
+package com.espezzialy.bankapi.controller
 
+import com.espezzialy.bankapi.model.Account
+import com.espezzialy.bankapi.repository.AccountRepository
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*

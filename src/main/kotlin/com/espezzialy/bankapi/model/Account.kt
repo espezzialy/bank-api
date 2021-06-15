@@ -1,4 +1,4 @@
-package com.espezzialy.bankapi
+package com.espezzialy.bankapi.model
 
 import javax.persistence.Entity
 import javax.persistence.GeneratedValue

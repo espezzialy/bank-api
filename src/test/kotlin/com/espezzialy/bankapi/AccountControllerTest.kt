@@ -1,5 +1,7 @@
 package com.espezzialy.bankapi
 
+import com.espezzialy.bankapi.model.Account
+import com.espezzialy.bankapi.repository.AccountRepository
 import com.fasterxml.jackson.databind.ObjectMapper
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
@@ -21,6 +23,7 @@ class AccountControllerTest {
     @Autowired lateinit var accountRepository: AccountRepository
 
 
+
     @Test
     fun `test find all`(){
         accountRepository.save(Account(name = "Test", document = "123", phone = "91919191"))
@@ -36,8 +39,10 @@ class AccountControllerTest {
     }
 
     @Test
-    fun `test find by Id`(){
-        val account = accountRepository.save(Account(name = "Test", document = "123", phone = "91919191"))
+    fun `test find account by id`(){
+
+        val account = accountRepository
+            .save(Account(name = "Test", document = "123", phone = "91919191"))
 
         mockMvc.perform(MockMvcRequestBuilders.get("/accounts/1"))
             .andExpect(MockMvcResultMatchers.status().isOk)
