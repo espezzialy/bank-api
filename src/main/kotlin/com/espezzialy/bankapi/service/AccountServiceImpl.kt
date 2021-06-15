@@ -33,7 +33,7 @@ class AccountServiceImpl(private val repository: AccountRepository) : AccountSer
 
     override fun update(id: Long, account: Account): Optional<Account> {
         val optional = getById(id)
-        if (optional.isEmpty) {
+        if (optional.equals(null)) {
             return optional
         }
 
