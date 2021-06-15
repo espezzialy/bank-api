@@ -13,5 +13,4 @@ interface AccountService {
     fun update(id: Long, account: Account) : Optional<Account>
 
     fun delete(id: Long)
-
 }
