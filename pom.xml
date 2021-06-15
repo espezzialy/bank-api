@@ -14,7 +14,7 @@
 	<name>bank-api</name>
 	<description>Making a first web API using Kotlin with Spring</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>1.8</java.version>
 		<kotlin.version>1.5.10</kotlin.version>
 	</properties>
 	<dependencies>
