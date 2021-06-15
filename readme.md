@@ -11,12 +11,13 @@ Com métodos CRUD para a criação de um usuário contendo:
 **Conhecimentos trabalhados**
 - Kotlin for BackEnd
 - Spring Boot
-- Spring security
+- Spring Web
+- Spring Security
 - SpringBoot Tests
 - TDD
-- Api Rest formation
+- H2 Database
 - Swagger Documentation
-- Exception Treatment Validation
+- Maven
 - Open API
-- JPA
+- JPA _Spring Data
 - Publicação de api com heroku
