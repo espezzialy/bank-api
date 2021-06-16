@@ -1,17 +1,18 @@
 package com.espezzialy.bankapi.model
 
-import javax.persistence.Entity
-import javax.persistence.GeneratedValue
-import javax.persistence.Id
-import javax.persistence.Table
+import javax.persistence.*
 
 
-@Entity(name= "accounts")
+@Entity
 @Table(name = "accounts")
 data class Account(
-    @Id @GeneratedValue
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     var id: Long? = null,
+    @Column(name = "name")
     val name: String,
+    @Column(name = "document")
     val document: String,
+    @Column(name = "phone")
     val phone: String
 )
