@@ -3,9 +3,11 @@ package com.espezzialy.bankapi.model
 import javax.persistence.Entity
 import javax.persistence.GeneratedValue
 import javax.persistence.Id
+import javax.persistence.Table
 
 
 @Entity(name= "accounts")
+@Table(name = "accounts")
 data class Account(
     @Id @GeneratedValue
     var id: Long? = null,
