@@ -9,7 +9,7 @@ import java.util.*
 
 @Service
 class AccountServiceImpl(private val repository: AccountRepository) : AccountService {
-    override fun create(account: Account): Account {
+    fun validateOnModification(account: Account){
         Assert.hasLength(account.name, "Name can not be empty")
         Assert.isTrue(account.name.length >= 5 , "Name should have at least 5 character")
 
@@ -18,7 +18,10 @@ class AccountServiceImpl(private val repository: AccountRepository) : AccountSer
 
         Assert.hasLength(account.phone, "Phone can not be empty")
         Assert.isTrue(account.phone.length >= 8 , "Phone should have at least 8 character")
+    }
 
+    override fun create(account: Account): Account {
+        validateOnModification(account)
         return repository.save(account)
     }
 
